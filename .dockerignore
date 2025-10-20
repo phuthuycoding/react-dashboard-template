@@ -1,0 +1,7 @@
+*
+!.dockerignore
+!dist
+!nginx
+!nginx/default.conf
+!Caddyfile
+!lighttpd.conf
