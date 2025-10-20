@@ -5,10 +5,11 @@ import { initReactI18next } from 'react-i18next';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { loadLocaleResources } from './lib/bootstrap';
 import { routers } from './app/router';
-import { ThemeProvider } from './app/shared/components';
+import { ThemeProvider, FirebaseSetupRequired } from './app/shared/components';
 import { AppProvider } from './app/shared/contexts/app.context';
 import { AuthProvider } from './app/shared/contexts/auth.context';
 import { Toaster } from './components/ui/sonner';
+import { isFirebaseConfigured } from './lib/services/firebase';
 import './index.css';
 
 const router = createBrowserRouter(routers, {
@@ -26,6 +27,17 @@ const router = createBrowserRouter(routers, {
   const appContainer = document.querySelector('#root');
   if (appContainer) {
     const root = createRoot(appContainer);
+
+    // Check if Firebase is configured
+    if (!isFirebaseConfigured()) {
+      root.render(
+        <ThemeProvider defaultTheme="system" storageKey="ev-ui-theme">
+          <FirebaseSetupRequired />
+        </ThemeProvider>,
+      );
+      return;
+    }
+
     root.render(
       <ThemeProvider defaultTheme="system" storageKey="ev-ui-theme">
         <AppProvider>

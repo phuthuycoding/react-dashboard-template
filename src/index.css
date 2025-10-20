@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -42,144 +41,144 @@
 }
 
 :root {
-  /* EV Charging Station Theme - Light Mode */
-  --radius: 0.75rem;
+  /* Professional Business Theme - Light Mode */
+  --radius: 0.5rem;
 
   /* Base colors */
-  --background: oklch(0.99 0.005 160);
-  --foreground: oklch(0.15 0.02 160);
+  --background: oklch(0.99 0.002 240);
+  --foreground: oklch(0.15 0.015 240);
 
   /* Card colors */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.02 160);
+  --card-foreground: oklch(0.15 0.015 240);
 
   /* Popover colors */
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.02 160);
+  --popover-foreground: oklch(0.15 0.015 240);
 
-  /* Primary colors - Emerald theme for EV charging */
-  --primary: oklch(0.55 0.15 160); /* Emerald-600 */
-  --primary-foreground: oklch(0.98 0.01 160);
+  /* Primary colors - Professional Blue */
+  --primary: oklch(0.5 0.15 250); /* Blue-600 */
+  --primary-foreground: oklch(0.99 0.002 240);
 
-  /* Secondary colors - Teal accent */
-  --secondary: oklch(0.95 0.02 160);
-  --secondary-foreground: oklch(0.25 0.08 160);
+  /* Secondary colors - Slate accent */
+  --secondary: oklch(0.95 0.01 240);
+  --secondary-foreground: oklch(0.2 0.02 240);
 
   /* Muted colors */
-  --muted: oklch(0.96 0.01 160);
-  --muted-foreground: oklch(0.45 0.05 160);
+  --muted: oklch(0.96 0.005 240);
+  --muted-foreground: oklch(0.46 0.02 240);
 
-  /* Accent colors - Bright emerald for highlights */
-  --accent: oklch(0.92 0.03 160);
-  --accent-foreground: oklch(0.25 0.08 160);
+  /* Accent colors - Lighter blue for highlights */
+  --accent: oklch(0.92 0.02 240);
+  --accent-foreground: oklch(0.2 0.05 240);
 
   /* Destructive colors - Red for errors */
-  --destructive: oklch(0.62 0.22 25);
-  --destructive-foreground: oklch(0.98 0.01 160);
+  --destructive: oklch(0.6 0.22 25);
+  --destructive-foreground: oklch(0.99 0.002 240);
 
   /* Border and input colors */
-  --border: oklch(0.9 0.02 160);
-  --input: oklch(0.9 0.02 160);
-  --ring: oklch(0.55 0.15 160);
+  --border: oklch(0.89 0.01 240);
+  --input: oklch(0.89 0.01 240);
+  --ring: oklch(0.5 0.15 250);
 
-  /* Chart colors - EV themed */
-  --chart-1: oklch(0.55 0.15 160); /* Primary emerald */
-  --chart-2: oklch(0.6 0.12 180); /* Teal */
-  --chart-3: oklch(0.7 0.18 140); /* Green */
-  --chart-4: oklch(0.8 0.15 80); /* Yellow-green */
-  --chart-5: oklch(0.45 0.12 200); /* Blue-green */
+  /* Chart colors - Business themed */
+  --chart-1: oklch(0.5 0.15 250); /* Primary blue */
+  --chart-2: oklch(0.6 0.12 200); /* Cyan */
+  --chart-3: oklch(0.55 0.18 160); /* Teal */
+  --chart-4: oklch(0.65 0.15 280); /* Purple */
+  --chart-5: oklch(0.7 0.12 330); /* Pink */
 
   /* Sidebar colors */
-  --sidebar: oklch(0.98 0.01 160);
-  --sidebar-foreground: oklch(0.15 0.02 160);
-  --sidebar-primary: oklch(0.55 0.15 160);
-  --sidebar-primary-foreground: oklch(0.98 0.01 160);
-  --sidebar-accent: oklch(0.92 0.03 160);
-  --sidebar-accent-foreground: oklch(0.25 0.08 160);
-  --sidebar-border: oklch(0.9 0.02 160);
-  --sidebar-ring: oklch(0.55 0.15 160);
+  --sidebar: oklch(0.98 0.005 240);
+  --sidebar-foreground: oklch(0.15 0.015 240);
+  --sidebar-primary: oklch(0.5 0.15 250);
+  --sidebar-primary-foreground: oklch(0.99 0.002 240);
+  --sidebar-accent: oklch(0.92 0.02 240);
+  --sidebar-accent-foreground: oklch(0.2 0.02 240);
+  --sidebar-border: oklch(0.89 0.01 240);
+  --sidebar-ring: oklch(0.5 0.15 250);
 
-  /* Success colors for charging status */
-  --success: oklch(0.6 0.15 140);
-  --success-foreground: oklch(0.98 0.01 160);
+  /* Success colors */
+  --success: oklch(0.55 0.15 150);
+  --success-foreground: oklch(0.99 0.002 240);
 
-  /* Warning colors for maintenance */
-  --warning: oklch(0.75 0.15 80);
-  --warning-foreground: oklch(0.15 0.02 160);
+  /* Warning colors */
+  --warning: oklch(0.7 0.15 75);
+  --warning-foreground: oklch(0.15 0.015 240);
 
-  /* Info colors for information */
-  --info: oklch(0.6 0.12 220);
-  --info-foreground: oklch(0.98 0.01 160);
+  /* Info colors */
+  --info: oklch(0.55 0.15 230);
+  --info-foreground: oklch(0.99 0.002 240);
 }
 
 .dark {
-  /* EV Charging Station Theme - Dark Mode */
+  /* Professional Business Theme - Dark Mode */
 
   /* Base colors */
-  --background: oklch(0.08 0.01 160);
-  --foreground: oklch(0.95 0.01 160);
+  --background: oklch(0.09 0.01 240);
+  --foreground: oklch(0.95 0.005 240);
 
   /* Card colors */
-  --card: oklch(0.12 0.02 160);
-  --card-foreground: oklch(0.95 0.01 160);
+  --card: oklch(0.13 0.015 240);
+  --card-foreground: oklch(0.95 0.005 240);
 
   /* Popover colors */
-  --popover: oklch(0.12 0.02 160);
-  --popover-foreground: oklch(0.95 0.01 160);
+  --popover: oklch(0.13 0.015 240);
+  --popover-foreground: oklch(0.95 0.005 240);
 
-  /* Primary colors - Brighter emerald for dark mode */
-  --primary: oklch(0.65 0.18 160); /* Emerald-400 */
-  --primary-foreground: oklch(0.08 0.01 160);
+  /* Primary colors - Brighter blue for dark mode */
+  --primary: oklch(0.6 0.18 250); /* Blue-400 */
+  --primary-foreground: oklch(0.09 0.01 240);
 
   /* Secondary colors */
-  --secondary: oklch(0.18 0.03 160);
-  --secondary-foreground: oklch(0.85 0.02 160);
+  --secondary: oklch(0.18 0.02 240);
+  --secondary-foreground: oklch(0.85 0.01 240);
 
   /* Muted colors */
-  --muted: oklch(0.18 0.03 160);
-  --muted-foreground: oklch(0.65 0.05 160);
+  --muted: oklch(0.18 0.02 240);
+  --muted-foreground: oklch(0.65 0.02 240);
 
   /* Accent colors */
-  --accent: oklch(0.22 0.04 160);
-  --accent-foreground: oklch(0.85 0.02 160);
+  --accent: oklch(0.22 0.03 240);
+  --accent-foreground: oklch(0.85 0.01 240);
 
   /* Destructive colors */
-  --destructive: oklch(0.7 0.2 25);
-  --destructive-foreground: oklch(0.95 0.01 160);
+  --destructive: oklch(0.68 0.22 25);
+  --destructive-foreground: oklch(0.95 0.005 240);
 
   /* Border and input colors */
-  --border: oklch(0.2 0.03 160);
-  --input: oklch(0.2 0.03 160);
-  --ring: oklch(0.65 0.18 160);
+  --border: oklch(0.21 0.02 240);
+  --input: oklch(0.21 0.02 240);
+  --ring: oklch(0.6 0.18 250);
 
-  /* Chart colors - EV themed for dark mode */
-  --chart-1: oklch(0.65 0.18 160); /* Primary emerald */
-  --chart-2: oklch(0.7 0.15 180); /* Teal */
-  --chart-3: oklch(0.75 0.2 140); /* Green */
-  --chart-4: oklch(0.85 0.18 80); /* Yellow-green */
-  --chart-5: oklch(0.55 0.15 200); /* Blue-green */
+  /* Chart colors - Business themed for dark mode */
+  --chart-1: oklch(0.6 0.18 250); /* Primary blue */
+  --chart-2: oklch(0.65 0.15 200); /* Cyan */
+  --chart-3: oklch(0.6 0.2 160); /* Teal */
+  --chart-4: oklch(0.7 0.18 280); /* Purple */
+  --chart-5: oklch(0.75 0.15 330); /* Pink */
 
   /* Sidebar colors */
-  --sidebar: oklch(0.1 0.015 160);
-  --sidebar-foreground: oklch(0.95 0.01 160);
-  --sidebar-primary: oklch(0.65 0.18 160);
-  --sidebar-primary-foreground: oklch(0.08 0.01 160);
-  --sidebar-accent: oklch(0.22 0.04 160);
-  --sidebar-accent-foreground: oklch(0.85 0.02 160);
-  --sidebar-border: oklch(0.2 0.03 160);
-  --sidebar-ring: oklch(0.65 0.18 160);
+  --sidebar: oklch(0.11 0.012 240);
+  --sidebar-foreground: oklch(0.95 0.005 240);
+  --sidebar-primary: oklch(0.6 0.18 250);
+  --sidebar-primary-foreground: oklch(0.09 0.01 240);
+  --sidebar-accent: oklch(0.22 0.03 240);
+  --sidebar-accent-foreground: oklch(0.85 0.01 240);
+  --sidebar-border: oklch(0.21 0.02 240);
+  --sidebar-ring: oklch(0.6 0.18 250);
 
-  /* Success colors for charging status */
-  --success: oklch(0.7 0.18 140);
-  --success-foreground: oklch(0.08 0.01 160);
+  /* Success colors */
+  --success: oklch(0.65 0.18 150);
+  --success-foreground: oklch(0.09 0.01 240);
 
-  /* Warning colors for maintenance */
-  --warning: oklch(0.8 0.18 80);
-  --warning-foreground: oklch(0.08 0.01 160);
+  /* Warning colors */
+  --warning: oklch(0.75 0.18 75);
+  --warning-foreground: oklch(0.09 0.01 240);
 
-  /* Info colors for information */
-  --info: oklch(0.7 0.15 220);
-  --info-foreground: oklch(0.08 0.01 160);
+  /* Info colors */
+  --info: oklch(0.65 0.18 230);
+  --info-foreground: oklch(0.09 0.01 240);
 }
 
 @layer base {
@@ -219,77 +218,41 @@
   animation-delay: 4s;
 }
 
-/* EV Charging Station Theme Utilities */
+/* Business Theme Utilities */
 
 /* Status indicator colors */
-.status-available {
+.status-active {
   @apply bg-green-500 text-white;
 }
 
-.status-charging {
+.status-pending {
   @apply bg-amber-500 text-white;
 }
 
-.status-occupied {
+.status-error {
   @apply bg-red-500 text-white;
 }
 
-.status-maintenance {
-  @apply bg-purple-500 text-white;
+.status-info {
+  @apply bg-blue-500 text-white;
 }
 
-.status-offline {
+.status-neutral {
   @apply bg-gray-500 text-white;
 }
 
-/* Gradient backgrounds for EV theme */
-.bg-ev-gradient {
-  background: linear-gradient(135deg, oklch(0.55 0.15 160) 0%, oklch(0.6 0.12 180) 100%);
+/* Gradient backgrounds for business theme */
+.bg-business-gradient {
+  background: linear-gradient(135deg, oklch(0.5 0.15 250) 0%, oklch(0.6 0.12 200) 100%);
 }
 
-.bg-ev-gradient-dark {
-  background: linear-gradient(135deg, oklch(0.65 0.18 160) 0%, oklch(0.7 0.15 180) 100%);
+.bg-business-gradient-dark {
+  background: linear-gradient(135deg, oklch(0.6 0.18 250) 0%, oklch(0.65 0.15 200) 100%);
 }
 
 /* Card hover effects */
 .card-hover {
-  @apply transition-all duration-300 hover:shadow-lg hover:scale-[1.02];
-}
-
-/* Charging animation */
-@keyframes charging-pulse {
-  0%,
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.7;
-    transform: scale(1.05);
-  }
-}
-
-.animate-charging {
-  animation: charging-pulse 2s ease-in-out infinite;
-}
-
-/* Power flow animation */
-@keyframes power-flow {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-}
-
-.animate-power-flow {
-  animation: power-flow 3s linear infinite;
+  @apply transition-all duration-300 hover:shadow-lg hover:scale-[1.01];
 }
 
 /* Glass morphism effect */

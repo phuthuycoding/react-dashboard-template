@@ -1,16 +1,17 @@
-# React Dashboard Template - Auth Only
+# React Dashboard Template
 
-A modern React dashboard template with authentication module. Built with clean MVVM architecture, ready for customization.
+A modern React dashboard template with authentication module and professional business theme. Built with clean MVVM architecture, ready for customization.
 
 ## 🌟 Features
 
 - **🔐 Authentication**: Complete login system with Firebase integration
 - **🎨 Modern UI**: Built with Tailwind CSS + shadcn/ui components
-- **🌙 Theme Support**: Dark/Light mode switching
+- **🌙 Theme Support**: Dark/Light mode with professional blue color scheme
 - **📱 Responsive Design**: Optimized for all devices
 - **🏗️ MVVM Architecture**: Clean separation of concerns
-- **🔥 Firebase Ready**: Pre-configured Firebase authentication
+- **🔥 Firebase Ready**: Pre-configured Firebase authentication with user-friendly setup UI
 - **📦 Type-Safe**: Full TypeScript support
+- **⚡ Setup Friendly**: Clear error messages and setup instructions when Firebase is not configured
 
 ## 🛠️ Tech Stack
 
@@ -79,7 +80,14 @@ pnpm install
 cp .env.example .env
 ```
 
-4. Configure Firebase:
+4. Start development server:
+```bash
+pnpm dev
+```
+
+5. Configure Firebase:
+   - When you first run the app, you'll see a user-friendly setup screen
+   - Follow the on-screen instructions to configure Firebase
    - Create a Firebase project at [https://console.firebase.google.com](https://console.firebase.google.com)
    - Enable Authentication > Sign-in method > Email/Password
    - Copy your Firebase config to `.env`:
@@ -93,10 +101,7 @@ VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 VITE_FIREBASE_APP_ID=your_app_id
 ```
 
-5. Start development server:
-```bash
-pnpm dev
-```
+6. Restart the development server after adding Firebase configuration
 
 ## 🔐 Authentication Module
 
@@ -114,6 +119,19 @@ The auth module follows MVVM architecture:
 - `src/app/modules/auth/services/auth.service.ts` - Auth API calls
 - `src/app/modules/auth/models/auth.schema.ts` - Validation schemas
 - `src/lib/services/firebase.ts` - Firebase configuration
+- `src/app/shared/components/firebase-setup-required.tsx` - Setup UI component
+
+### Firebase Setup UI
+
+The template includes a user-friendly setup screen that appears when Firebase is not configured:
+
+- Detects missing Firebase environment variables
+- Displays step-by-step setup instructions
+- Provides direct links to Firebase Console
+- Shows example `.env` configuration
+- Copy-to-clipboard functionality for easy setup
+
+This ensures new users have a smooth onboarding experience instead of cryptic error messages.
 
 ## 📝 Adding New Modules
 
@@ -130,13 +148,39 @@ mkdir -p src/app/modules/your-module/{components,hooks,models,pages,services,vie
 
 ## 🎨 Theming
 
-Theme configuration is in `src/app/config/theme.ts`:
+The template uses a professional business theme with blue as the primary color.
 
-- Color palette (Primary, Secondary, etc.)
-- Dark/Light mode support
-- Responsive breakpoints
+### Theme Configuration
 
-See `THEME_GUIDELINE.md` for detailed theming instructions.
+Theme configuration is in:
+- **CSS Variables**: `src/index.css` - Contains all color definitions in OKLCH format
+- **Theme Object**: `src/app/config/theme.ts` - Color palette constants
+
+### Color Scheme
+
+**Light Mode:**
+- Primary: Professional Blue (`oklch(0.5 0.15 250)`)
+- Secondary: Slate Gray
+- Radius: 0.5rem (slightly rounded corners)
+
+**Dark Mode:**
+- Primary: Brighter Blue (`oklch(0.6 0.18 250)`)
+- Background: Dark slate
+- Proper contrast for readability
+
+### Customizing Colors
+
+To change the theme colors:
+1. Edit CSS variables in `src/index.css` (lines 43-182)
+2. Update the theme object in `src/app/config/theme.ts`
+3. Both light and dark modes can be customized independently
+
+### Available Utility Classes
+
+- `.status-active`, `.status-pending`, `.status-error`, `.status-info`, `.status-neutral`
+- `.bg-business-gradient`, `.bg-business-gradient-dark`
+- `.card-hover` - Smooth hover effects for cards
+- `.glass`, `.glass-dark` - Glass morphism effects
 
 ## 📦 Build
 

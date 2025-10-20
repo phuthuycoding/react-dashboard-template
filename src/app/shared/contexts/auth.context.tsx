@@ -68,6 +68,12 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }): JSX.Ele
 
   // Listen to Firebase auth state changes
   useEffect(() => {
+    if (!auth) {
+      // If Firebase is not initialized, set loading to false
+      setAuthState((prev) => ({ ...prev, isLoading: false }));
+      return;
+    }
+
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
       if (firebaseUser) {
         try {

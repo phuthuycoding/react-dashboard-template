@@ -1,45 +1,45 @@
 /**
- * EV Charging Station Theme Configuration
+ * Professional Business Theme Configuration
  * Defines the color palette and theme settings for the application
  */
 
-export const evTheme = {
+export const businessTheme = {
   colors: {
-    // Primary brand colors
+    // Primary brand colors - Professional Blue
     primary: {
-      50: '#ecfdf5',
-      100: '#d1fae5',
-      200: '#a7f3d0',
-      300: '#6ee7b7',
-      400: '#34d399',
-      500: '#10b981', // Main emerald
-      600: '#059669',
-      700: '#047857',
-      800: '#065f46',
-      900: '#064e3b',
+      50: '#eff6ff',
+      100: '#dbeafe',
+      200: '#bfdbfe',
+      300: '#93c5fd',
+      400: '#60a5fa',
+      500: '#3b82f6', // Main blue
+      600: '#2563eb',
+      700: '#1d4ed8',
+      800: '#1e40af',
+      900: '#1e3a8a',
     },
 
-    // Secondary teal colors
+    // Secondary slate colors
     secondary: {
-      50: '#f0fdfa',
-      100: '#ccfbf1',
-      200: '#99f6e4',
-      300: '#5eead4',
-      400: '#2dd4bf',
-      500: '#14b8a6', // Main teal
-      600: '#0d9488',
-      700: '#0f766e',
-      800: '#115e59',
-      900: '#134e4a',
+      50: '#f8fafc',
+      100: '#f1f5f9',
+      200: '#e2e8f0',
+      300: '#cbd5e1',
+      400: '#94a3b8',
+      500: '#64748b', // Main slate
+      600: '#475569',
+      700: '#334155',
+      800: '#1e293b',
+      900: '#0f172a',
     },
 
-    // Status colors for charging stations
+    // Status colors for business applications
     status: {
-      available: '#10b981', // Green - Available
-      charging: '#f59e0b', // Amber - Charging
-      occupied: '#ef4444', // Red - Occupied
-      maintenance: '#8b5cf6', // Purple - Maintenance
-      offline: '#6b7280', // Gray - Offline
+      active: '#10b981', // Green - Active/Success
+      pending: '#f59e0b', // Amber - Pending/Warning
+      error: '#ef4444', // Red - Error/Inactive
+      info: '#3b82f6', // Blue - Information
+      neutral: '#6b7280', // Gray - Neutral/Disabled
     },
 
     // Semantic colors
@@ -51,10 +51,10 @@ export const evTheme = {
 
   // Radius values
   radius: {
-    sm: '0.5rem',
-    md: '0.75rem',
-    lg: '1rem',
-    xl: '1.5rem',
+    sm: '0.25rem',
+    md: '0.5rem',
+    lg: '0.75rem',
+    xl: '1rem',
   },
 
   // Shadows for depth
@@ -72,4 +72,4 @@ export const evTheme = {
   },
 } as const;
 
-export type EVTheme = typeof evTheme;
+export type BusinessTheme = typeof businessTheme;
