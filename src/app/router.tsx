@@ -27,7 +27,7 @@ export const routers: RouteObject[] = [
     errorElement: (
       <ErrorLayout>
         <ErrorBoundary>
-          <div>Có lỗi xảy ra</div>
+          <div>An error occurred</div>
         </ErrorBoundary>
       </ErrorLayout>
     ),
@@ -52,7 +52,7 @@ export const routers: RouteObject[] = [
     errorElement: (
       <ErrorLayout>
         <ErrorBoundary>
-          <div>Có lỗi xảy ra</div>
+          <div>An error occurred</div>
         </ErrorBoundary>
       </ErrorLayout>
     ),

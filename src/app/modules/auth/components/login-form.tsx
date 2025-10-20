@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Zap } from 'lucide-react';
 import { useLoginViewModel } from '../viewmodels/login.viewmodel';
 import { PasswordInput, LoadingButton } from './';
-import Logo from '@/assets/logo_transparent.png';
+import Logo from '@/assets/react.svg';
 
 export const LoginForm: React.FC = () => {
   const { form, authState, handleLogin } = useLoginViewModel();
@@ -19,10 +19,10 @@ export const LoginForm: React.FC = () => {
             </div>
           </div>
           <CardTitle className="text-2xl font-bold text-center bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-            Đăng nhập hệ thống
+            Sign in to your account
           </CardTitle>
           <CardDescription className="text-center text-gray-600 dark:text-gray-400">
-            Nhập thông tin để truy cập bảng điều khiển
+            Enter your credentials to access the dashboard
           </CardDescription>
         </CardHeader>
 
@@ -37,7 +37,7 @@ export const LoginForm: React.FC = () => {
                     <FormLabel className="text-gray-700 dark:text-gray-300">Email</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="admin@evcharging.com"
+                        placeholder="admin@example.com"
                         type="email"
                         className="h-11 bg-white/50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700 focus:border-emerald-500 focus:ring-emerald-500"
                         {...field}
@@ -53,10 +53,10 @@ export const LoginForm: React.FC = () => {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-gray-700 dark:text-gray-300">Mật khẩu</FormLabel>
+                    <FormLabel className="text-gray-700 dark:text-gray-300">Password</FormLabel>
                     <FormControl>
                       <PasswordInput
-                        placeholder="Nhập mật khẩu của bạn"
+                        placeholder="Enter your password"
                         className="h-11 bg-white/50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700 focus:border-emerald-500 focus:ring-emerald-500"
                         {...field}
                       />
@@ -70,18 +70,18 @@ export const LoginForm: React.FC = () => {
                 type="submit"
                 className="w-full h-11 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-[1.02]"
                 isLoading={authState.isLoading}
-                loadingText="Đang đăng nhập...">
+                loadingText="Signing in...">
                 <Zap className="w-4 h-4 mr-2" />
-                Đăng nhập
+                Sign in
               </LoadingButton>
             </form>
           </Form>
 
           <div className="text-center pt-4">
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              Quên mật khẩu?
+              Forgot your password?
               <button className="text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300 font-medium ml-1 hover:underline">
-                Khôi phục ngay
+                Reset now
               </button>
             </p>
           </div>

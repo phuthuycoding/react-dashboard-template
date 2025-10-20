@@ -46,16 +46,16 @@ export class AuthService {
   async login(
     credentials: LoginCredentials,
   ): Promise<{ firebaseUser: FirebaseUser; user: UserResponse; token: string }> {
-    // 1. Login với Firebase
+    // 1. Login with Firebase
     const firebaseUser = await this.loginWithFirebase(credentials);
 
-    // 2. Lấy Firebase ID token
+    // 2. Get Firebase ID token
     const firebaseToken = await this.getFirebaseToken();
     if (!firebaseToken) {
       throw new Error('Failed to get Firebase token');
     }
 
-    // 3. Gọi backend API để lấy user data
+    // 3. Call backend API to get user data
     const user = await this.getCurrentUser(firebaseToken);
 
     // 4. Store token
@@ -66,10 +66,10 @@ export class AuthService {
 
   async logout(): Promise<void> {
     try {
-      // 1. Logout từ Firebase
+      // 1. Logout from Firebase
       await signOut(auth);
 
-      // 2. Call backend logout API nếu có token
+      // 2. Call backend logout API if token exists
       const token = this.getStoredToken();
       if (token) {
         try {
@@ -120,7 +120,7 @@ export class AuthService {
   }
 }
 
-// Hook để sử dụng AuthService
+// Hook to use AuthService
 export const useAuthService = () => {
   const apiClient = useApiClient();
   return new AuthService(apiClient);

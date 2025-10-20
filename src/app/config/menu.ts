@@ -7,8 +7,8 @@ export interface MenuItem {
   isActive?: boolean;
   badge?: string;
   items?: SubMenuItem[];
-  roles?: string[]; // Roles có thể access menu này
-  permissions?: string[]; // Permissions cần thiết
+  roles?: string[]; // Roles that can access this menu
+  permissions?: string[]; // Required permissions
 }
 
 export interface SubMenuItem {
@@ -36,19 +36,19 @@ export const projects: ProjectItem[] = [];
 // Team/Organization info - Empty for auth-only template
 export const teams: { name: string; logo: LucideIcon; plan: string }[] = [];
 
-// Helper function để filter menu theo user role
+// Helper function to filter menu by user role
 export const filterMenuByRole = (menu: MenuItem[], userRoles: string[]): MenuItem[] => {
   return menu.filter((item) => {
-    // Nếu không có role requirement, cho phép tất cả
+    // If no role requirement, allow all
     if (!item.roles || item.roles.length === 0) {
       return true;
     }
 
-    // Check nếu user có ít nhất 1 role được phép
+    // Check if user has at least 1 allowed role
     const hasRole = item.roles.some((role) => userRoles.includes(role));
 
     if (hasRole && item.items) {
-      // Filter sub-items theo role
+      // Filter sub-items by role
       item.items = item.items.filter((subItem) => {
         if (!subItem.roles || subItem.roles.length === 0) {
           return true;
@@ -61,7 +61,7 @@ export const filterMenuByRole = (menu: MenuItem[], userRoles: string[]): MenuIte
   });
 };
 
-// Helper function để filter projects theo user role
+// Helper function to filter projects by user role
 export const filterProjectsByRole = (projects: ProjectItem[], userRoles: string[]): ProjectItem[] => {
   return projects.filter((project) => {
     if (!project.roles || project.roles.length === 0) {

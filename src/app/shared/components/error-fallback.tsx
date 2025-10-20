@@ -11,8 +11,8 @@ interface ErrorFallbackProps {
 export const ErrorFallback = ({
   error,
   resetError,
-  title = 'Có lỗi xảy ra',
-  message = 'Ứng dụng gặp phải lỗi không mong muốn. Vui lòng thử lại.',
+  title = 'An error occurred',
+  message = 'The application encountered an unexpected error. Please try again.',
 }: ErrorFallbackProps) => {
   const handleReload = () => {
     window.location.reload();
@@ -38,7 +38,7 @@ export const ErrorFallback = ({
       {/* Error Details (Development) */}
       {process.env.NODE_ENV === 'development' && error && (
         <div className="bg-muted p-4 rounded-lg text-left max-w-full overflow-auto">
-          <h3 className="font-semibold text-foreground mb-2">Chi tiết lỗi:</h3>
+          <h3 className="font-semibold text-foreground mb-2">Error details:</h3>
           <pre className="text-sm text-destructive whitespace-pre-wrap">{error.message}</pre>
           {error.stack && (
             <details className="mt-2">
@@ -55,7 +55,7 @@ export const ErrorFallback = ({
           <button
             onClick={resetError}
             className="inline-flex items-center gap-2 px-4 py-2 bg-destructive text-destructive-foreground rounded-lg hover:bg-destructive/90 transition-colors duration-200 font-medium">
-            Thử lại
+            Try again
           </button>
         )}
 
@@ -63,14 +63,14 @@ export const ErrorFallback = ({
           onClick={handleReload}
           className="inline-flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/80 transition-colors duration-200 font-medium">
           <RefreshCw className="w-4 h-4" />
-          Tải lại
+          Reload
         </button>
 
         <Link
           to="/"
           className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium">
           <Home className="w-4 h-4" />
-          Trang chủ
+          Home
         </Link>
       </div>
     </div>

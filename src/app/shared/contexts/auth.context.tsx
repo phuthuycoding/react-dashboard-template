@@ -58,7 +58,7 @@ interface AuthProviderProps {
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }): JSX.Element => {
   const authService = useAuthService();
   const [authState, setAuthState] = useState<AuthState>({
-    isLoading: true, // Loading initially để check auth state
+    isLoading: true, // Loading initially to check auth state
     isAuthenticated: false,
     firebaseUser: null,
     user: null,

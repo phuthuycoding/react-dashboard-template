@@ -11,12 +11,12 @@ import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarRail } fr
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const { user } = useAuth();
 
-  // Nếu chưa login thì không hiển thị sidebar
+  // If not logged in, don't display sidebar
   if (!user) {
     return null;
   }
 
-  // Filter menu và projects theo user role
+  // Filter menu and projects by user role
   const userRoles = [user.role]; // Convert single role to array
   const filteredNavMain = filterMenuByRole(navMain, userRoles);
   const filteredProjects = filterProjectsByRole(projects, userRoles);

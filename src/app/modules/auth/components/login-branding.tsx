@@ -1,5 +1,5 @@
 import { Zap, Car, Battery } from 'lucide-react';
-import Logo from '@/assets/logo_transparent.png';
+import Logo from '@/assets/react.svg';
 
 export const LoginBranding: React.FC = () => {
   return (
@@ -14,37 +14,37 @@ export const LoginBranding: React.FC = () => {
           </div>
           <div>
             <h1 className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-              SOLEV Charging Station
+              React Dashboard
             </h1>
-            <p className="text-sm text-muted-foreground">Management System</p>
+            <p className="text-sm text-muted-foreground">Template</p>
           </div>
         </div>
 
         <div className="space-y-4">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white leading-tight">
-            Quản lý trạm sạc
+            Modern Dashboard
             <br />
             <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-              thông minh
+              Solution
             </span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-            Hệ thống quản lý toàn diện cho mạng lưới trạm sạc xe điện. Theo dõi, điều khiển và tối ưu hóa hiệu suất sạc.
+            A comprehensive management system with modern UI components. Monitor, control, and optimize your operations.
           </p>
         </div>
 
         <div className="grid grid-cols-3 gap-4">
           <div className="flex flex-col items-center p-4 bg-white/50 dark:bg-gray-800/50 rounded-lg backdrop-blur-sm">
             <Car className="w-8 h-8 text-emerald-500 mb-2" />
-            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Xe điện</span>
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Analytics</span>
           </div>
           <div className="flex flex-col items-center p-4 bg-white/50 dark:bg-gray-800/50 rounded-lg backdrop-blur-sm">
             <Battery className="w-8 h-8 text-teal-500 mb-2" />
-            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Pin thông minh</span>
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Performance</span>
           </div>
           <div className="flex flex-col items-center p-4 bg-white/50 dark:bg-gray-800/50 rounded-lg backdrop-blur-sm">
             <Zap className="w-8 h-8 text-cyan-500 mb-2" />
-            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Sạc nhanh</span>
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Real-time</span>
           </div>
         </div>
       </div>

@@ -18,7 +18,7 @@ export interface LoginResponse {
   refreshToken?: string;
 }
 
-// Backend API Response (từ /api/v1/auth/me)
+// Backend API Response (from /api/v1/auth/me)
 export interface UserResponse {
   id: string;
   firebaseUid: string;
@@ -54,7 +54,7 @@ export interface AuthState {
   isLoading: boolean;
   isAuthenticated: boolean;
   firebaseUser: FirebaseUser | null;
-  user: UserResponse | null; // User data từ backend
+  user: UserResponse | null; // User data from backend
   firebaseToken: string | null;
   error: AuthError | null;
 }

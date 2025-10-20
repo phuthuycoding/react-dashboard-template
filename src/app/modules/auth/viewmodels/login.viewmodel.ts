@@ -13,9 +13,9 @@ export const useLoginViewModel = () => {
 
   const handleLogin = async (credentials: LoginFormData) => {
     try {
-      // Sử dụng login method từ AuthContext
+      // Use login method from AuthContext
       await auth.login(credentials);
-      // Success toast và navigation
+      // Success toast and navigation
       navigate('/');
     } catch (error: unknown) {
       const authError = handleAuthError(error);

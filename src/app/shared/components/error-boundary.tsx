@@ -61,17 +61,17 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
             {/* Error Message */}
             <div className="space-y-4">
               <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                Oops! Có lỗi xảy ra
+                Oops! Something went wrong
               </h1>
               <p className="text-lg text-muted-foreground max-w-md mx-auto">
-                Ứng dụng gặp phải lỗi không mong muốn. Chúng tôi đã ghi nhận và sẽ khắc phục sớm nhất.
+                The application encountered an unexpected error. We have been notified and will fix it as soon as possible.
               </p>
             </div>
 
             {/* Error Details (Development) */}
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <div className="bg-muted p-4 rounded-lg text-left max-w-full overflow-auto">
-                <h3 className="font-semibold text-foreground mb-2">Chi tiết lỗi:</h3>
+                <h3 className="font-semibold text-foreground mb-2">Error details:</h3>
                 <pre className="text-sm text-destructive whitespace-pre-wrap">{this.state.error.message}</pre>
                 {this.state.errorInfo && (
                   <details className="mt-2">
@@ -90,25 +90,25 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
                 onClick={this.handleReload}
                 className="inline-flex items-center text-white gap-2 px-6 py-3 bg-destructive rounded-lg hover:bg-destructive/90 transition-colors duration-200 font-medium">
                 <RefreshCw className="w-5 h-5" />
-                Tải lại trang
+                Reload page
               </button>
               <button
                 onClick={this.handleReset}
                 className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/80 transition-colors duration-200 font-medium">
-                Thử lại
+                Try again
               </button>
 
               <Link
                 to="/"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium">
                 <Home className="w-5 h-5" />
-                Về trang chủ
+                Go home
               </Link>
             </div>
 
             {/* Help Text */}
             <div className="text-sm text-muted-foreground">
-              <p>Nếu lỗi vẫn tiếp tục, vui lòng liên hệ với bộ phận hỗ trợ.</p>
+              <p>If the error persists, please contact support.</p>
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ interface LoadingButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
  */
 export const LoadingButton: React.FC<LoadingButtonProps> = ({
   isLoading = false,
-  loadingText = 'Đang xử lý...',
+  loadingText = 'Processing...',
   children,
   className,
   disabled,

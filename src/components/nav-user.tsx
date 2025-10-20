@@ -19,7 +19,7 @@ export function NavUser() {
   const { isMobile } = useSidebar();
   const { user, logout } = useAuth();
 
-  // Nếu không có user thì không hiển thị
+  // If no user, don't display
   if (!user) {
     return null;
   }
@@ -27,14 +27,14 @@ export function NavUser() {
   const handleLogout = async () => {
     try {
       await logout();
-      toast.success('Đăng xuất thành công!');
+      toast.success('Logged out successfully!');
       window.location.href = '/auth/login';
     } catch (error) {
-      toast.error(`Đăng xuất thất bại: ${error}`);
+      toast.error(`Logout failed: ${error}`);
     }
   };
 
-  // Tạo initials từ tên
+  // Create initials from name
   const getInitials = (name: string) => {
     return name
       .split(' ')
@@ -91,11 +91,11 @@ export function NavUser() {
             <DropdownMenuGroup>
               <DropdownMenuItem>
                 <Users />
-                <Link to={'/profile'}>Tài khoản</Link>
+                <Link to={'/profile'}>Account</Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <CreditCard />
-                Thanh toán
+                Billing
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <Bell />
@@ -105,7 +105,7 @@ export function NavUser() {
             <DropdownMenuSeparator />
             <DropdownMenuItem onClick={handleLogout}>
               <LogOut />
-              Đăng xuất
+              Log out
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

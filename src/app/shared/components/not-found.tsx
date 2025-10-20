@@ -15,10 +15,10 @@ export const NotFound = () => {
       {/* Error Message */}
       <div className="space-y-4">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-          Trang không tìm thấy
+          Page not found
         </h1>
         <p className="text-lg text-muted-foreground max-w-md mx-auto">
-          Xin lỗi, trang bạn đang tìm kiếm không tồn tại hoặc đã được di chuyển.
+          Sorry, the page you are looking for does not exist or has been moved.
         </p>
       </div>
 
@@ -28,27 +28,27 @@ export const NotFound = () => {
           to="/"
           className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium">
           <Home className="w-5 h-5" />
-          Về trang chủ
+          Go home
         </Link>
 
         <button
           onClick={() => window.history.back()}
           className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/80 transition-colors duration-200 font-medium">
           <ArrowLeft className="w-5 h-5" />
-          Quay lại
+          Go back
         </button>
       </div>
 
       {/* Help Text */}
       <div className="text-sm text-muted-foreground space-y-2">
-        <p>Nếu bạn nghĩ đây là lỗi, vui lòng liên hệ với chúng tôi.</p>
+        <p>If you think this is an error, please contact us.</p>
         <div className="flex justify-center gap-4">
           <Link to="/" className="text-primary hover:text-primary/80 underline">
             Dashboard
           </Link>
           <span className="text-muted">|</span>
           <Link to="/auth/login" className="text-primary hover:text-primary/80 underline">
-            Đăng nhập
+            Sign in
           </Link>
         </div>
       </div>
