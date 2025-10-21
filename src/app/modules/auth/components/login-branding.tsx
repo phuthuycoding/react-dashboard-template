@@ -1,4 +1,4 @@
-import { Zap, Car, Battery } from 'lucide-react';
+import { BarChart3, TrendingUp, Activity } from 'lucide-react';
 import Logo from '@/assets/react.svg';
 
 export const LoginBranding: React.FC = () => {
@@ -35,15 +35,15 @@ export const LoginBranding: React.FC = () => {
 
         <div className="grid grid-cols-3 gap-4">
           <div className="flex flex-col items-center p-4 bg-white/50 dark:bg-gray-800/50 rounded-lg backdrop-blur-sm">
-            <Car className="w-8 h-8 text-emerald-500 mb-2" />
+            <BarChart3 className="w-8 h-8 text-emerald-500 mb-2" />
             <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Analytics</span>
           </div>
           <div className="flex flex-col items-center p-4 bg-white/50 dark:bg-gray-800/50 rounded-lg backdrop-blur-sm">
-            <Battery className="w-8 h-8 text-teal-500 mb-2" />
+            <TrendingUp className="w-8 h-8 text-teal-500 mb-2" />
             <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Performance</span>
           </div>
           <div className="flex flex-col items-center p-4 bg-white/50 dark:bg-gray-800/50 rounded-lg backdrop-blur-sm">
-            <Zap className="w-8 h-8 text-cyan-500 mb-2" />
+            <Activity className="w-8 h-8 text-cyan-500 mb-2" />
             <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Real-time</span>
           </div>
         </div>

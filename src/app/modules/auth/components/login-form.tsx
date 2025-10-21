@@ -1,7 +1,7 @@
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Zap } from 'lucide-react';
+import { LogIn } from 'lucide-react';
 import { useLoginViewModel } from '../viewmodels/login.viewmodel';
 import { PasswordInput, LoadingButton } from './';
 import Logo from '@/assets/react.svg';
@@ -71,7 +71,7 @@ export const LoginForm: React.FC = () => {
                 className="w-full h-11 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-[1.02]"
                 isLoading={authState.isLoading}
                 loadingText="Signing in...">
-                <Zap className="w-4 h-4 mr-2" />
+                <LogIn className="w-4 h-4 mr-2" />
                 Sign in
               </LoadingButton>
             </form>
